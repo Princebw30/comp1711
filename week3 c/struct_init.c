@@ -8,7 +8,7 @@ struct student {
 };
 
 int main () {
-    struct student new_student = {"Name Surname", "28932123", 35};
+    struct student new_student ;
     char name [200];
     char student_id [11];
     int mark;
