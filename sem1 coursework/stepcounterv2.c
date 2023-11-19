@@ -15,7 +15,8 @@ int main() {
     FITNESS_DATA fitness_data1;
     FILE *file = NULL; 
 
-    while (check == 0) {
+    while (check == 0) 
+    {
         printf("Menu options: \n");
         printf("A: Specify the filename to be imported\n");
         printf("B: Dislay the total number of records in the file\n");
@@ -27,7 +28,8 @@ int main() {
         printf("Enter choice: ");
         scanf(" %c", &option); 
 
-        switch (option) {
+        switch (option) 
+        {
 
             //case A
             case 'A':
@@ -35,7 +37,8 @@ int main() {
                 char filename[100];
                 scanf("%s", filename);
                 file = fopen(filename, "r");
-                if (file == NULL) {
+                if (file == NULL) 
+                {
                     printf("Error: Could not open file\n");
                     exit(1);
                 }
@@ -51,7 +54,8 @@ int main() {
                 else 
                 {
                     int countB = 0;
-                    while (fgets(line_buffer, buffer_size, file) != NULL) {
+                    while (fgets(line_buffer, buffer_size, file) != NULL) 
+                    {
                         countB++;
                     }
                     printf("Total records: %d\n", countB);
@@ -73,7 +77,8 @@ int main() {
                 char time[50];
                 int countC = 0;
 
-                while (fgets(line_buffer, buffer_size, file) != NULL) {
+                while (fgets(line_buffer, buffer_size, file) != NULL) 
+                {
                     tokeniseRecord(line_buffer, ",", fitness_data2.date, fitness_data2.time, fitness_data2.steps);
                     int steps = atoi(fitness_data2.steps);
                     if (steps < MinSteps) 
