@@ -21,7 +21,7 @@ int main() {
         printf("A: Specify the filename to be imported\n");
         printf("B: Dislay the total number of records in the file\n");
         printf("C: Find the date and time of the timeslot with the fewest steps\n");
-        printf("D: Find the date andtime of the timeslot with the largest number of steps\n");
+        printf("D: Find the date and time of the timeslot with the largest number of steps\n");
         printf("E: Find te mean step count of all the records in the file\n");
         printf("F: Find the longest continuous period where the step count is above 500 steps\n");
         printf("Q: Quit\n");
@@ -225,7 +225,7 @@ int main() {
             rewind(file);
             break;
 
-            // //case Q
+            //case Q
             case 'Q':
                 check = 1;
                 printf("Exit\n");
